@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 4/29/20 8:56 PM
+Description: Starting integrated server
+
+java.lang.Error: Missing/invalid yggdrasil public key!
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.<init>(YggdrasilMinecraftSessionService.java:72)
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createMinecraftSessionService(YggdrasilAuthenticationService.java:56)
+	at net.minecraft.client.Minecraft.func_71371_a(Minecraft.java:2362)
+	at net.minecraftforge.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:734)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_186777_e(GuiListWorldSelectionEntry.java:249)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_186774_a(GuiListWorldSelectionEntry.java:199)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_148278_a(GuiListWorldSelectionEntry.java:168)
+	at net.minecraft.client.gui.GuiListExtended.func_148179_a(SourceFile:41)
+	at net.minecraft.client.gui.GuiWorldSelection.func_73864_a(SourceFile:117)
+	at net.minecraft.client.gui.GuiScreen.func_146274_d(GuiScreen.java:533)
+	at net.minecraft.client.gui.GuiWorldSelection.func_146274_d(SourceFile:49)
+	at net.minecraft.client.gui.GuiScreen.func_146269_k(GuiScreen.java:501)
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1758)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1097)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:397)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.<init>(YggdrasilMinecraftSessionService.java:72)
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createMinecraftSessionService(YggdrasilAuthenticationService.java:56)
+
+-- Starting integrated server --
+Details:
+	Level ID: New World
+	Level Name: New World
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_71371_a(Minecraft.java:2362)
+	at net.minecraftforge.fml.client.FMLClientHandler.tryLoadExistingWorld(FMLClientHandler.java:734)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_186777_e(GuiListWorldSelectionEntry.java:249)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_186774_a(GuiListWorldSelectionEntry.java:199)
+	at net.minecraft.client.gui.GuiListWorldSelectionEntry.func_148278_a(GuiListWorldSelectionEntry.java:168)
+	at net.minecraft.client.gui.GuiListExtended.func_148179_a(SourceFile:41)
+	at net.minecraft.client.gui.GuiWorldSelection.func_73864_a(SourceFile:117)
+	at net.minecraft.client.gui.GuiScreen.func_146274_d(GuiScreen.java:533)
+	at net.minecraft.client.gui.GuiWorldSelection.func_146274_d(SourceFile:49)
+	at net.minecraft.client.gui.GuiScreen.func_146269_k(GuiScreen.java:501)
+
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.client.gui.GuiWorldSelection
+Stacktrace:
+	at net.minecraft.client.Minecraft.func_71407_l(Minecraft.java:1758)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1097)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:397)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 3831899112 bytes (3654 MB) / 4019716096 bytes (3833 MB) up to 6116868096 bytes (5833 MB)
+	JVM Flags: 5 total; -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Xmx6000M -Xms4000M -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2768 4 mods loaded, 4 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID        | Version      | Source                                  | Signature                                |
+	|:------ |:--------- |:------------ |:--------------------------------------- |:---------------------------------------- |
+	| UCHIJA | minecraft | 1.12.2       | minecraft.jar                           | None                                     |
+	| UCHIJA | mcp       | 9.42         | minecraft.jar                           | None                                     |
+	| UCHIJA | FML       | 8.0.99.99    | forge-1.12.2-14.23.5.2768-universal.jar | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| UCHIJA | forge     | 14.23.5.2768 | forge-1.12.2-14.23.5.2768-universal.jar | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'Intel' Version: '4.6.0 - Build 26.20.100.7926' Renderer: 'Intel(R) UHD Graphics 620'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) UHD Graphics 620 GL version 4.6.0 - Build 26.20.100.7926, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i7-8565U CPU @ 1.80GHz

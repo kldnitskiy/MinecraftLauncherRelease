@@ -1,0 +1,36 @@
+{
+  "name": "megabattle-minecraft-launcher",
+  "version": "1.0.0",
+  "description": "Minecraft launcher for inner projects and researches ",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=ico.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"MegaLauncher\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "megabattle-minecraft-launcher"
+  },
+  "keywords": [
+    "minecraft",
+    "node.js",
+    "electron",
+    "launcher"
+  ],
+  "author": "Danil Kladnitskiy",
+  "license": "ISC",
+  "dependencies": {
+    "electron-log": "^4.1.2",
+    "electron-packager": "^14.2.1",
+    "express": "^4.17.1",
+    "generate-password": "^1.5.1",
+    "iconv-lite": "^0.5.1",
+    "minecraft-launcher-core": "^3.13.1",
+    "update-electron-app": "^1.5.0"
+  },
+  "devDependencies": {
+    "electron": "^8.2.4"
+  }
+}
