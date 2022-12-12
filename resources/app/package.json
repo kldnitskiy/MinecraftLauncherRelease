@@ -24,7 +24,7 @@
   "dependencies": {
     "electron-log": "^4.1.2",
     "electron-packager": "^14.2.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "generate-password": "^1.5.1",
     "iconv-lite": "^0.5.1",
     "minecraft-launcher-core": "^3.13.1",
